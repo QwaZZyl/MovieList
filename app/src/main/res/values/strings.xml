@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- General -->
+    <string name="app_name">RequestMoviesList</string>
+
+    <!-- Sample text -->
+    <string name="sample_title">The Shawshank Redemtion</string>
+    <string name="sample_year">1994</string>
+    <string name="sample_director">Frank Darabont</string>
+    <string name="sample_genre">Drama</string>
+    <string name="sample_description">Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.</string>
+    <string name="content_description_poster">place for movie poster</string>
+</resources>
