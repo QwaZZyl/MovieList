@@ -5,7 +5,7 @@ import android.view.View
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.karavatskiy.serhii.requestmovieslist.R
-import com.karavatskiy.serhii.requestmovieslist.data.pojo.MovieDescription
+import com.karavatskiy.serhii.requestmovieslist.data.model.MovieDescription
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.movies_list_item.icMoviePoster
 import kotlinx.android.synthetic.main.movies_list_item.tvDescription

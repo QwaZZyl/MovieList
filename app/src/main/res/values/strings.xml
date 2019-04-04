@@ -2,6 +2,7 @@
 
     <!-- General -->
     <string name="app_name">RequestMoviesList</string>
+    <string name="message_double_click_exit">Click BACK again to exit</string>
 
     <!-- Sample text -->
     <string name="sample_title">The Shawshank Redemtion</string>
@@ -9,5 +10,18 @@
     <string name="sample_director">Frank Darabont</string>
     <string name="sample_genre">Drama</string>
     <string name="sample_description">Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.</string>
+
+    <!-- Title toolbar -->
+    <string name="title_movies">Movies</string>
+    <string name="title_filters">Filters</string>
+
     <string name="content_description_poster">place for movie poster</string>
+    <string name="apply_filters">apply filters</string>
+    <string name="ib_filter_title">Filters</string>
+    <string name="ib_clear_title">Clear</string>
+    <string name="tv_title_filters">Filters:</string>
+    <string name="tv_no_movies">There is no movies for this criteria</string>
+    <string name="btn_content_description_clear_years">button clearing years filters</string>
+    <string name="btn_content_description_clear_genres">button clearing genres filters</string>
+    <string name="btn_content_description_clear_directors">button clearing directors filters</string>
 </resources>

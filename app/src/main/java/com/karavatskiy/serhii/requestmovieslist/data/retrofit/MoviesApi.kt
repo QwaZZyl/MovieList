@@ -1,6 +1,6 @@
 package com.karavatskiy.serhii.requestmovieslist.data.retrofit
 
-import com.karavatskiy.serhii.requestmovieslist.data.pojo.Movies
+import com.karavatskiy.serhii.requestmovieslist.data.model.Movies
 import retrofit2.Call
 import retrofit2.http.GET
 

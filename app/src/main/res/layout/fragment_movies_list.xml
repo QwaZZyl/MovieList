@@ -1,12 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:padding="@dimen/half_margin">
+
+    <TextView
+        android:id="@+id/tvMsgNoMovies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_no_movies"
+        android:textSize="@dimen/twenty_text"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitleFilters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_title_filters"
+        android:textSize="@dimen/twenty_text"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/clYears"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleFilters">
+
+        <TextView
+            android:id="@+id/tvYearsFilters"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/ibDisableYearsFil"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/sample_description" />
+
+        <ImageButton
+            android:contentDescription="@string/btn_content_description_clear_years"
+            android:id="@+id/ibDisableYearsFil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_cancel_24px"
+            app:layout_constraintBottom_toBottomOf="@id/tvYearsFilters"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvYearsFilters" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/clGenres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/clYears">
+
+        <TextView
+            android:id="@+id/tvGenresFilters"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/ibDisableGenresFil"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/sample_description" />
+
+        <ImageButton
+            android:contentDescription="@string/btn_content_description_clear_genres"
+            android:id="@+id/ibDisableGenresFil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_cancel_24px"
+            app:layout_constraintBottom_toBottomOf="@id/tvGenresFilters"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvGenresFilters" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/clDirectors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/clGenres">
+
+        <TextView
+            android:id="@+id/tvDirectorsFilters"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/ibDisableDirectorsFil"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/sample_description" />
+
+        <ImageButton
+            android:contentDescription="@string/btn_content_description_clear_directors"
+            android:id="@+id/ibDisableDirectorsFil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_cancel_24px"
+            app:layout_constraintBottom_toBottomOf="@id/tvDirectorsFilters"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvDirectorsFilters" />
+    </android.support.constraint.ConstraintLayout>
+
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvMoviesList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clDirectors"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp" />
 
 </android.support.constraint.ConstraintLayout>

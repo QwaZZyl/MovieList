@@ -1,9 +1,14 @@
-package com.karavatskiy.serhii.requestmovieslist.data.pojo
+package com.karavatskiy.serhii.requestmovieslist.data.model
 
+import android.arch.persistence.room.Entity
+import android.arch.persistence.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
+@Entity
 data class MovieDescription(
 
+    @PrimaryKey(autoGenerate = true)
+    val id: Int,
     @SerializedName("desription")
     val description: String,
 
@@ -21,4 +26,10 @@ data class MovieDescription(
 
     @SerializedName("title")
     val title: String
+)
+
+data class Movies(
+
+    @SerializedName("values")
+    val values: List<MovieDescription>
 )

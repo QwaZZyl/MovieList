@@ -11,14 +11,26 @@ import android.widget.Toast
  */
 object UiUtils {
 
-        fun toast(context: Context, text: String) {
-            Toast.makeText(context, text, Toast.LENGTH_SHORT).show()
-        }
+    fun toast(context: Context, text: String) {
+        Toast.makeText(context, text, Toast.LENGTH_SHORT).show()
+    }
 
-        fun replaceFragment(fragmentManager: FragmentManager, container: Int, fragment: Fragment, tag: String) {
-            fragmentManager.beginTransaction()
-                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                .replace(container, fragment, tag).addToBackStack(tag)
-                .commit()
-        }
+    fun replaceFragment(fragmentManager: FragmentManager, container: Int, fragment: Fragment, tag: String) {
+        fragmentManager.beginTransaction()
+            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+            .replace(container, fragment, tag).addToBackStack(tag)
+            .commit()
+    }
+
+    fun replaceFragmentWithOutBackStack(
+        fragmentManager: FragmentManager,
+        container: Int,
+        fragment: Fragment,
+        tag: String
+    ) {
+        fragmentManager.beginTransaction()
+            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+            .replace(container, fragment, tag).addToBackStack(tag)
+            .commit()
+    }
 }

@@ -1,4 +1,4 @@
-package com.karavatskiy.serhii.requestmovieslist.ui.movieslist
+package com.karavatskiy.serhii.requestmovieslist.ui.filterslist
 
 import com.karavatskiy.serhii.requestmovieslist.data.local.Repository
 import com.karavatskiy.serhii.requestmovieslist.data.model.Error
@@ -7,11 +7,11 @@ import com.karavatskiy.serhii.requestmovieslist.data.model.ResultRequest
 import com.karavatskiy.serhii.requestmovieslist.data.model.Success
 
 /**
- * Created by Serhii on 29.03.2019.
+ * Created by Serhii on 31.03.2019.
  */
-class MoviesListPresenter {
+class FiltersPresenterDefault : FiltersPresenter {
 
-    suspend fun requestData(): ResultRequest<List<MovieDescription>> =
+    override suspend fun requestData(): ResultRequest<List<MovieDescription>> =
         try {
             val repository = Repository()
             val result = repository.getMovies()

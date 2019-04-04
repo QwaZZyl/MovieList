@@ -4,8 +4,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.karavatskiy.serhii.requestmovieslist.R
-import com.karavatskiy.serhii.requestmovieslist.data.pojo.MovieDescription
-import com.karavatskiy.serhii.requestmovieslist.data.pojo.Movies
+import com.karavatskiy.serhii.requestmovieslist.data.model.MovieDescription
 
 /**
  * Created by Serhii on 29.03.2019.
@@ -18,9 +17,9 @@ class RVMoviesAdapter : RecyclerView.Adapter<MoviesViewHolder>() {
         holder.bind(movies[position])
     }
 
-    fun setMovies(movies: Movies) {
+    fun setMovies(movies: List<MovieDescription>) {
         this.movies.clear()
-        this.movies.addAll(movies.values)
+        this.movies.addAll(movies)
         notifyDataSetChanged()
     }
 
